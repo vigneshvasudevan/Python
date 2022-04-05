@@ -1,9 +1,0 @@
-------------------
-Exercise problems:
-------------------
-
-
-1. Find even and odd numbers starting from 1 upto N
-2. Find all numbers starting from 1 to N which has 5 as a digit
-3. Sorting(Selection sort, Bubble sort, Insertion sort)
-4. Given a string, convert it into an number
