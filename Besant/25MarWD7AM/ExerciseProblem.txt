@@ -1,2 +1,19 @@
-# Day:
-# Exercise:
+------------------
+Exercise problems:
+------------------
+
+# Day: 01-Apr-2022
+# Exercise: 
+  1. Find even and odd numbers starting from 1 upto N
+  2. Find all numbers starting from 1 upto N which has 5 has it digits
+  
+# Day: 04-Apr-2022  
+# Exercise : 
+  1. Implement Selection sort & bubble sort
+
+# Day: 05-Apr-2022  
+# Exercise : 
+  1. Implement Insertion sort
+  2. Given a string, convert it into an number
+  
+ 
