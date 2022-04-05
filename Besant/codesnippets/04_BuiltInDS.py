@@ -3,27 +3,35 @@ Ref:
 https://docs.python.org/3/tutorial/datastructures.html
 
 # what is a bult-in-data structures?
-
+List, tuple, sets, dictionaries
 
 # why we need them ?
-
-
-# how to use them ?
-
+Store data as per the needs say faster retrievel
 
 # Is there an alterante to it?
 collections, numpyarray, dataframe in pandas
 '''
 
-# built -in types
-# List, tuple, set, dict 
+
+
 '''
-# syntax:
-# <var name> = [value1, value2, value3,...]
+-------------------------
+Topic: List
+-------------------------
+Syntax:
+<var name> = [value1, value2, value1,...]
+Here 
+1. value1 and value2 may or may not be of same datatype.
+2. Duplicates are allowed in list
+
+List is zero based index, in other words first element of the 
+list has index '0'
+'''
+
 foo = [100, "hello", True, None]
 print(foo)
-x=foo[0]
-y = foo[3]
+print("First element of list 'Foo' is = ",foo[0])
+print("4th element of list 'Foo' is = ",foo[3])
 
 # add entries to list
 foo.append(200)
@@ -35,14 +43,17 @@ foo.pop()
 foo.remove(2)
 foo.reverse
 
-# tuple 
-# read only lists 
-mytuple = (100, "Hello", True, None)
-mytuple[1]
+print("Get elements until 2nd index", foo[:2])
+print("Get elements starting from 1st index untill end", foo[1:])
+print("Get elements starting from 1st index untill 3rd", foo[1:3])
 
 
-# List -> is an array usually contains 100, 70, 85
 
+'''
+----------------------------
+Topic: Shallow copy in list
+----------------------------
+'''
 mixedList = [50, 10, 40]
 clone = mixedList.copy()
 print("At Start mixedList", mixedList)
@@ -53,79 +64,91 @@ print("At the end mixedList", mixedList)
 print("At the end clone ", clone)
 
 
-myTuple = ("100", 10 , True)
-myTuple[0]
-myTuple[1]
 
 
-len(mixedList)
+'''
+-------------------------
+Topic: Tuple
+-------------------------
+Syntax:
+<var name> = (value1, value2, value3,...)
 
-print("List at the start", mixedList)
-mixedList.pop()
-print("After pop", mixedList)
-mixedList.remove("100")
-print("After remove", mixedList)
-
-
-
-myList = [100, 70, 85]
-print("before rev:", myList)
-myList.reverse()
-print("After rev:", myList)
-
-# push & pop -> push: append or insert ; pop -> remove, delete; Stack is LIFO hence push and pop and the end or rear
-
-
-# queue: enqueue, deque; enqueue: append, insert at the rear ; deque; remove from the front
-# myList.pop(0)
-
-# Tuple
-# List vs Tuple
- 
-
-myList = list([100, 70, 85])
-# above is eq to myList = [100, 70, 85]
-print(myList)
-course = "bachelors", "masters", "dipolma" 
-# const, read-only , immutable
+Tuples are same as list but they are read-only aka const, immutable
+''' 
+mytuple = (100, "Hello", True, None)
+print("2nd element in myTuple =",mytuple[1])
 
 
 
+'''
+-------------------------
+Topic: List vs Tuple
+-------------------------
+When to choose List and Tuple
+'''
+
+# Some examples when tuple is preferred over list
+# 
+# 1. College offering only limited courses
+# 2. Student names of a class where students can't enroll in
+# the middle of the course and student can't drop out.
+course = ("bachelors", "masters", "diploma" )
+
+
+
+
+
+'''
+--------------------------------------------------------
+Topic: Sets
+Syntax:
+<var name> = {value1, value2, value3,...}
+
+here
+1. Every value in the set must be unique
+2. value1 & value2 may or may not be of same primitive type
+-----------------------------------------------------------
+'''
+
+rainbow = {"violet", "indigo", "blue", "green", "yellow", "orange", "red"}
+print("Rainbow has 7 unique colors and they are =", rainbow)
+print("Is red found in rainbow", "red" in rainbow)
+print("Is grey found in rainbow", "grey" in rainbow)
 
 
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-
-#hash map or map
-
-from pickle import NONE
-from xmlrpc.client import Boolean
+print("basket ignoring duplicates ", basket)
+basket.add("jackfruit")
+print("basket after adding one fruit", basket)
 
 
+
+
+
+'''
+--------------------------------------------------------
+Topic: Dictionaries
+Syntax:
+<var name> = {key1 : value1, key2: value2, key3: value1,...}
+
+here
+1. Every key in the set must be unique but values need not be
+
+Dictionaries as same as hashmap or map in other programming
+languages
+-----------------------------------------------------------
+'''
 studentRec = { 100: "foo", 101:"foo", 102: "bar"}
 print(studentRec)    
 print(type(studentRec.keys()))
-print(studentRec.get(102))
-
-isStudentFound = False;
-if studentRec.get(102) != NONE & studentRec.get(101) != NONE:
-    isStudentFound = True
-    
-print(isStudentFound)
+print("Accessing dict value using get operator", studentRec.get(102))
+print("Accessing dict value using [] operator",studentRec[100])
+print("Accessing invalid key", studentRec[104])
 
 
-# Stack-> LIFO 
-# queue -> FIFO
-
-
-
-
-rainbow = {"violet", "indigo", "blue", "green", "yellow", "orange", "red"}
-iscolourRedFoundInRainbow = "red" in rainbow
-print(iscolourRedFoundInRainbow)
-isWhiteInRainbow = "white" in rainbow
-print(isWhiteInRainbow)
 '''
-
-
-myList = [100, 200, 200, 300, 400]
-print(myList[2:4])
+Things to try:
+    1. Implement stack and queue using List
+    2. To create a empty set and later add entries
+        Hint: use mySet = set() instead of mySet = {}
+'''

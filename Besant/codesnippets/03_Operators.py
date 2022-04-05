@@ -21,12 +21,47 @@ Yes, built in functions can be used say x = add(5, 10) is same as x = 5 + 10
 
 '''
 
+'''
+-------------------------
+Topic: Types of operator
+-------------------------
+1. Arithemetic
+    + for addition
+    - for subtraction
+    / for division
+    * for multiplication
+    % for modullo
+    // for floor division
 
-# operators
-# unary, binary, ternary operator
-# ~(NOT), bitwise (AND, OR, XOR) -> (&, |, ^)
+2. Bitwise operators
+    ~ NOT
+    & AND
+    | OR
+    ^ XOR
+    >> Right shift
+    << Left shift
+    
+3. Logical operators
+    and 
+    or
+    not
+    
+    == equality
+    = assignment
+    > greater than
+    >= greater than or equal to
+    < lesser than
+    <= lesser than or equal to
+    != Not equal to
+    
+4. Special operators
+    : Slice
+    in containment operator
+    @ matrix multiplication
+    
+'''
 
-# AND, OR( &&, || ), ==, !=, >=, <=
+
 
 foo = 100
 bar = 200
@@ -37,10 +72,9 @@ baz = foo or x
 print(baz)
 
 
-
-'''
-
 num = 100; 
+
+# ternary operator
 x = "0" if num %2 == 0 else "1"
 
 if num%2 == 0 :
@@ -48,4 +82,3 @@ if num%2 == 0 :
 else :
     x = "1" 
     
-'''

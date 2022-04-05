@@ -10,5 +10,3 @@ Python is fun to learn, let's enjoy learning python.
 print("Hello there") 
 print("Today is ", date.today())
 print("This is the day we wrote our first python program")
-
-# ref: https://github.com/CoreyMSchafer/code_snippets/tree/master/Python-SQLite
