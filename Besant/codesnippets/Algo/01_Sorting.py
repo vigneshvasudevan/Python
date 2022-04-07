@@ -61,8 +61,8 @@ print("After sorting Array = ", arr)
 '''
 Insertion sort algo:
 
-Succinct idea: Assume first element is sorted, Pick elements from unsorted array and insert it
-at the right spot in the sorted array. 
+Succinct idea: Pick elements from unsorted array and insert it
+at the right spot in the sorted array
 
 1. Assume the first element is sorted
 2. let i be 1 
@@ -70,7 +70,7 @@ at the right spot in the sorted array.
 4. is j > =0 , move to next step
 5. check if current element is smaller than it's immediate left neighbour 
     by arr[j] < arr [j-1];
-6. if true swap them, decrement 'j' & repeat step 4, Otherwise increement 'i' & go to step3
+6. if true swap them, decrement 'j' & repeat step 4, Otherwise increment 'i' & go to step3
 7. increment j, repeat step3
 '''
 
