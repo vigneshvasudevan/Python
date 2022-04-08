@@ -27,6 +27,12 @@ else:
     print("Number is niether divisble by 2 nor by 3")
 
 
+# Ternary operator using if -else
+x = "even" if num % 2 == 0 else "odd"
+print(x)
+
+
+# switch case supported from 3.10.x pthon
 reminder = num %2
 match reminder :
     case 0:

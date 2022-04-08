@@ -141,6 +141,15 @@ sort(arr)
 print("After sorting Array = ", arr) 
 
 
+# Topic: Higher order functions -> nothing but function which takes another function as input arg
+# e.g map, filter, reduce
+# syntax:
+# map(function_to_apply, list_of_inputs)
+
+nums = [1, 2, 3, 4, 5]
+squared = []
+for i in nums:
+    squared.append(i**2)
 
 '''
 Things to try: 

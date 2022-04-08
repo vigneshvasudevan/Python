@@ -1,6 +1,6 @@
 '''
 # what is a collection?
-It's a flavour to vanilla collection in python (List, tuple, set,dict).
+It's a flavour to vanilla collections in python i.e. (List, tuple, set,dict).
 It is found under "collection" module
 '''
 
