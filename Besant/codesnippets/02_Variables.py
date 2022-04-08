@@ -38,8 +38,6 @@ Python supports 5 primitive types namely
     3. String(one or more characters)
     4. Boolean -> True, False
     5. None -> means nothing
-    
-Note: Character is a string in python whose length is 1.
 '''
 
 a = 100
@@ -50,7 +48,7 @@ c = 100.0
 print(type(c))
 d = True
 print(type(d))
-e= 'c'
+e = 'c'
 print(type(e))
 f = None
 print(type(f))
