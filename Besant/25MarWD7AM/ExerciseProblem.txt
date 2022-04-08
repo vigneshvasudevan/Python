@@ -16,4 +16,7 @@ Exercise problems:
   1. Implement Insertion sort
   2. Given a string, convert it into an number
   
+# Day: 08-Apr-2022  
+# Exercise : 
+  1. Given 'n' find the nth Fibonacci(Hint use recursion + optimize the solution using caching)
  
