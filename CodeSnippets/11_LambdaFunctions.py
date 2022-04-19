@@ -2,10 +2,14 @@
 '''
 # what is a lambda function?
 Syntatic sugar to regular function
+Lambda function is also known as anonymous function
 
 How to use them?
 Syntax:
-    <variable name> = lambda (argument1, argument2, ...) ()
+    # Creating lambda function
+    <aliasNameToFunction> = lambda argument1, argument2 :  <statement>
+    # Calling lambda function just like normal function
+    aliasNameToFunction()
 '''
 
 # Function to sqaure two numbers
