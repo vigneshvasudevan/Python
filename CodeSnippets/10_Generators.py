@@ -105,7 +105,7 @@ def grep(pattern):
 search = grep('coroutine')
 next(search)
 # Output: Searching for coroutine
-search.send("I love you")
-search.send("Don't you love me?")
-search.send("I love coroutines instead!")
+search.send("This is a simple string passed to yield")
+search.send("Another string passed to line number 101")
+search.send("Phrase containing coroutines is now being sent")
 # Output: I love coroutines instead!
