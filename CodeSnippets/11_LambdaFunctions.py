@@ -65,7 +65,9 @@ product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
 '''
 Things to try:
     1. Write a lambda function to add two numbers
-    2. Given a list of numbers sort them by their frequency
+    2. Sort a = [(1, 2), (4, 1), (9, 10), (13, -3)] such that
+        after sort a = [(13, -3), (4, 1), (1, 2), (9, 10)]
+    3. Given a list of numbers sort them by their frequency
         e.g: [10, 2, 5, 2, 5 , 5 , 10] , result = [2, 10, 5]
 '''
    
