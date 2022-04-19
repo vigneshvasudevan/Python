@@ -23,7 +23,7 @@ def square(nums):
 # Lamda function
 
 mySquare = lambda myList : myList*myList
-print("Sqaure using lambda function", mySquare([1, 2, 3, 4, 5]))
+print("Square using lambda function", mySquare([1, 2, 3, 4, 5]))
 
 
 # Topic: Higher order functions -> nothing but function which takes another function as input arg
