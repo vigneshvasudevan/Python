@@ -91,7 +91,7 @@ foo( y = 100, z = 200, a = 100, b = 400)
 def swap(x, y) :
     temp = x
     x = y
-    y = x
+    y = temp
     
 a = 100
 b = 200
@@ -105,7 +105,7 @@ print("After swap b =", b)
 def swap(x, y) :
     temp = x
     x = y
-    y = x
+    y = temp
     # returning the swapped value
     return (x, y)
 
@@ -140,8 +140,19 @@ print("Before sorting Array = ", arr)
 sort(arr) 
 print("After sorting Array = ", arr) 
 
+arr = [10, 20, -50, -8, 7 , -15]
+print("Before sorting Array = ", arr)
+sort(arr) 
+print("After sorting Array = ", arr) 
+
+
+
 '''
 Things to try: 
-    1. Write a function which takes one argument & return nth fibonacci
+    1. Write a function to find minmum of two given values
+        - Return none when type is mistmatched, return min otherwise
+    2. Write a function to find minmum of list
+        - Return none when type is mistmatched, return min otherwise
+    3. Write a function which takes one argument 'n' & return nth Fibonacci
 '''
 
