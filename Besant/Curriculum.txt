@@ -1,0 +1,180 @@
+################
+Course syllabus
+################
+
+Introduction to python
+------------------------
+what is python ? why python ?
+Python internals
+Python vs other programming language
+
+
+Setting up python env
+-----------------------
+VS code preferred IDE, helping with setup
+Tour on VS code
+Hello world program
+basic parts of a simple python program
+
+Python basics
+-------------
+variable(what, why, how)
+basic operators in python
+primitive types (int, float, string(char), Boolean, None)
+
+
+Non primitive types(Builtin datastructure : List, Tuple, Sets, Dictionary)
+---------------------------------------------------------------------------
+    - When to use which datastructure
+    - Go over accessing elements by index, add & delete operation API's
+    - use of operators like : to slice , 'in' to check existence
+    
+collections 
+-------------
+    - namedtuple, counter, OrderedDict, deque, chainmap, 
+
+
+conditional statements : if elsif else, switch classifier
+------------------------
+
+loops:
+--------
+    why loops?
+    for and while (over collections)
+    break, continue, pass
+
+functions:
+-------------
+    why, how(syntax)
+    inputs/args and return value in a function
+    default value of function
+    functions with args and ret value with types
+    function with more than args (*args & **kwargs)
+    recursive function
+    higher order function like map,reduce, filter
+
+closures: why and how
+------------------------
+
+lamdbda functions: 
+------------------------
+    why, how(syntax)
+
+Iterator, Generators: why and how
+-----------------------------------
+
+class: 
+-------
+    what is a class, why class, how class is supported in python
+    class vs objects
+    class members vs object members
+    inheritance(single, mutiple, multi-level), use of keyword "super"
+    special functions like __init__
+
+Decorator: why and how
+------------------------
+
+modules
+---------
+    define module, import
+    builtins, standard modules, scopes...
+    create public APIs
+
+Exception handling:
+---------------------
+    why and how
+    Try-catch
+    raise built-in exception, user defined exception
+
+File handling :
+-----------------
+    open, read, write : txt, csv File
+    save python var into a file and load using pickle
+
+Concurrency:
+---------------
+    multi-threading
+    synchronization
+    sleep
+
+n/w programming:
+------------------
+    client -server arch
+    basics chat app
+
+SQL database:
+---------------
+    Introduction to database(why database)
+    Tour on database
+    ACID principle
+    Interacting with SQL from python
+    peform CRUD operation
+    notion of transaction
+    commit & rollback
+
+
+
+GUI development:
+-----------------
+    widgets
+    layout management
+    signal & slots
+    Qmessage & Qdialog
+
+web dev using Django
+----------------------
+    simple login web page 
+
+datascience with python:
+------------------------
+    numpy, pandas, scipy, scikit, matplotlib
+    basics
+
+Final project:
+
+
+
+
+
+
+
+
+
+Course plan:
+------------
+week 1-2: (10hrs)
+---------
+Introduction to python
+Setting up python env
+Python basics
+Non primitive types
+collections 
+conditional statements
+loops
+
+
+week(3-4) : 10hrs
+-----------------
+functions
+closures
+lamdbda
+Iterator, Generators
+class
+Decorator
+
+week(5-6) : 10hrs
+-----------------
+modules
+exception handling
+file handling
+Concurrency
+n/w programming
+
+week(7-8) : 10 hrs
+------------------
+SQL
+GUI development
+web development
+datascience
+
+Final project: 5 days
