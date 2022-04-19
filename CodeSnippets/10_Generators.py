@@ -100,12 +100,12 @@ def grep(pattern):
     while True:
         line = (yield)
         if pattern in line:
-            print(line)
+            print("Found a phrase having ",  pattern)
             
 search = grep('coroutine')
 next(search)
-# Output: Searching for coroutine
+# Output: Searching for "coroutine"
 search.send("This is a simple string passed to yield")
 search.send("Another string passed to line number 101")
-search.send("Phrase containing coroutines is now being sent")
-# Output: I love coroutines instead!
+search.send("Phrase containing coroutine is now being sent")
+# Output: Found a phrase having coroutine
