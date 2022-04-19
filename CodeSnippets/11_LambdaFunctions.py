@@ -2,7 +2,7 @@
 '''
 # what is a lambda function?
 Syntatic sugar to regular function
-Lambda function is also known as anonymous function
+Lambda function is aka anonymous function
 
 How to use them?
 Syntax:
@@ -31,7 +31,6 @@ print("Sqaure using lambda function", mySquare([1, 2, 3, 4, 5]))
 
 # syntax:
 # map(function_to_apply, list_of_inputs)
-from functools import map
 from functools import reduce
 
 nums = [1, 2, 3, 4, 5]
