@@ -21,9 +21,11 @@ def square(nums):
 
 
 # Lamda function
-
-mySquare = lambda myList : myList*myList
-print("Square using lambda function", mySquare([1, 2, 3, 4, 5]))
+mySquareFunction = lambda num : num**2
+squares = []
+for i in [1, 2, 3, 4, 5]:
+    squares.append(mySquareFunction(i))
+print(squares)
 
 
 # Topic: Higher order functions -> nothing but function which takes another function as input arg
