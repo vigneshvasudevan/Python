@@ -20,3 +20,31 @@ Exercise problems:
 # Exercise : 
   1. Given 'n' find the nth Fibonacci(Hint use recursion + optimize the solution using caching)
  
+# Day: 11-Apr-2022 to 15-Apr-2022
+# Exercise : 
+1. Find minimum of two given values
+2. Find minimum of a list, reuse the function to Find minimum of two given values
+3. Find nth fibonacci of a number using recursion and without recursion
+4. Implement a function to find a number inside a sorted array(Hint: Binary search)
+5. Implement to find last surviour in josephus problem
+
+# Day: 18-Apr-2022
+# Exercise : 
+1. Basics of list
+    1. Create a list with 10 elements
+    2. Assign the 7th element in the list to a new value?
+    3. Iterate over all elements in the list & Print their value?
+    4. Iterate over all elements in the list and skip 3rd & 7th elements?
+    5. mylist = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], Iterate and
+        Print elements until you see ‘60’
+    6. Add 5 new elements to the below list
+        mylist = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    7.  Consider a list x= [10,20,30,10,40,10], remove all 10 from the list so that x = [20,30,40]
+
+
+# Day: 19-Apr-2022
+# Exercise : 
+1. Lambda functions:
+    1. Write a lambda function to add two numbers
+    2. Given a list of numbers sort them by their frequency
+        e.g: [10, 2, 5, 2, 5 , 5 , 10] , result = [2, 10, 5]
