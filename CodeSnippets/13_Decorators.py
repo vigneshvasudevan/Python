@@ -47,8 +47,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 '''
 
-#Now let's make a decorator to check for this case that 
-# will cause the error.
+# Now let's make a decorator to check for this
 
 def smart_divide(func):
     def inner(a, b):
@@ -66,4 +65,4 @@ def divide(a, b):
     print(a/b)
     
 # @smart_divide divide(5, 10) is nothing but 
-# decoratedDivide = smart_divide(divide(a = 5, b=10)); decoratedDivide(5, 10)
+# innerFunction = smart_divide(divide); innerFunction(5, 10)
