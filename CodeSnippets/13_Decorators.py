@@ -47,7 +47,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 '''
 
-# Now let's make a decorator to check for this
+# Now let's make a decorator for this
 
 def smart_divide(func):
     def inner(a, b):
