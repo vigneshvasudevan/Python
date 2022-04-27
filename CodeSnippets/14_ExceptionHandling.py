@@ -38,3 +38,29 @@ try:
     print(divide(10, "hello"))
 except:
     print("oops")
+    
+
+# custom exception
+class CustomError(Exception):
+    pass
+
+raise CustomError
+
+
+class SalaryNotInRangeError(Exception):
+    """Exception raised when salary is less than 5000pm.
+
+    Attributes:
+        salary -- input salary which caused the error
+        message -- some message
+    """
+
+    def __init__(self, salary, message="Minimum wage as per labour law is 5000 pm"):
+        self.salary = salary
+        self.message = message
+        super().__init__(self.message)
+
+
+salary = int(input("Enter salary amount: "))
+if 5000 > salary :
+    raise SalaryNotInRangeError(salary)
