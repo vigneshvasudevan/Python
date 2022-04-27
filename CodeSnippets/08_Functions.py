@@ -148,6 +148,9 @@ print("After sorting Array = ", arr)
 
 
 '''
+Things to ponder:
+Why 'function' is called as first-class citizens of python ?
+
 Things to try: 
     1. Write a function to find minmum of two given values
         - Return none when type is mistmatched, return min otherwise
