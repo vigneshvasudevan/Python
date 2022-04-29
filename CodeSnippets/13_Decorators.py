@@ -53,7 +53,7 @@ def smart_divide(func):
     def inner(a, b):
         print("divide", a, "by", b)
         if b == 0:
-            print("Whoops! cannot divide")
+            print("oops! cannot divide")
             return
 
         return func(a, b)
@@ -63,6 +63,7 @@ def smart_divide(func):
 @smart_divide
 def divide(a, b):
     print(a/b)
+
     
 # @smart_divide divide(5, 10) is nothing but 
 # innerFunction = smart_divide(divide); innerFunction(5, 10)
