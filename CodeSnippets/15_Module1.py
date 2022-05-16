@@ -7,3 +7,13 @@ print("y=", y)
 Module2.foo()
 obj = Module2.mock()
 obj.bar()
+
+
+'''
+Future read:
+Package vs module : 
+https://docs.python.org/3/tutorial/modules.html
+https://careerkarma.com/blog/what-is-init-py/
+https://www.udacity.com/blog/2021/01/what-is-a-python-package.html
+
+'''
