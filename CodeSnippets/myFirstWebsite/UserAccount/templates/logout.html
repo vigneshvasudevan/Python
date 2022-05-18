@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+
+{% block content %}      
+
+{% load crispy_forms_tags %}
+
+{% for message in messages %}
+    
+    <div class="alert alert-success">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+           {{ message }}
+    </div>
+
+{% endfor %}
+
+<!--Logout--> 
+{%if user.is_authenticated %}
+    <h1> Dear {{ user }}, Welcome !!</h1>
+    
+{% endif %}
+
+{% endblock %}
