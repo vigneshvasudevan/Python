@@ -5,8 +5,8 @@ Problem: Consider an array of size 'N', sort the array in ascending order
 '''
 Selection sort algo:
 
-Succinct idea: pick the smallest element in unsorted array and replace it 
-with the first element in unsorted array
+Succinct idea: pick the kth element in unsorted array and replace it 
+with the kth element in unsorted array
 
 1. let i be 0 (start element)
 2. Assume that element found at 'i'th position is the 'i'th smallest element
