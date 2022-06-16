@@ -1,7 +1,7 @@
 '''
 # what is a collection?
 It's a flavour to vanilla collections in python i.e. (List, tuple, set,dict).
-It is found under "collection" module
+It is  found under "collection" module
 '''
 
 
@@ -16,8 +16,8 @@ DarkGreen = rbgCode(Red = 0, Blue= 0, Green= 255)
 # this is much better than -> rgbCode = (0, 0, 255) since this doesn't 
 # tell us which one belongs to which color say 255 belongs to green or red or blue
 print("percentage of red in dark green =", DarkGreen[0])
-print("percentage of red in dark green =", DarkGreen[1])
-print("percentage of red in dark green =", DarkGreen[2])
+print("percentage of blue in dark green =", DarkGreen[1])
+print("percentage of green in dark green =", DarkGreen[2])
 
 
 '''

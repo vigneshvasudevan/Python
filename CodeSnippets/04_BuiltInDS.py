@@ -28,7 +28,7 @@ List is zero based index, in other words first element of the
 list has index '0'
 '''
 
-foo = [100, "hello", True, None]
+foo = [100, 10.0123, "hello", True, None]
 print(foo)
 print("First element of list 'Foo' is = ",foo[0])
 print("4th element of list 'Foo' is = ",foo[3])
@@ -40,7 +40,7 @@ foo.insert(2, 300)
 print("Foo after insert", foo)
 # delete entries from list
 foo.pop()
-foo.remove(2)
+foo.remove(200)
 foo.reverse
 
 print("Get elements until 2nd index", foo[:2])
@@ -151,4 +151,20 @@ Things to try:
     1. Implement stack and queue using List
     2. To create a empty set and later add entries
         Hint: use mySet = set() instead of mySet = {}
+        
+'''
+
+'''
+Exercise:
+
+    1. Create a list with 10 elements
+    2. Assign the 7th element in the list to a new value
+    3. Iterate over all elements in the list & Print the element
+    4. Iterate over all elements in the list but skip 3rd & 7th elements & print the rest of the elements
+    5. mylist = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], Iterate and
+    Print elements until you see ‘60’
+    6. Add 5 new elements to the below list
+    mylist = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    7.  Consider a list x= [10,20,30,10,40,10], remove all 10 from the list so that x = [20,30,40]
+
 '''

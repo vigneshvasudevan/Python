@@ -12,7 +12,7 @@ Syntax:
     aliasNameToFunction()
 '''
 
-# Function to sqaure two numbers
+# Function to square two numbers
 def square(nums):
     mySquare = []
     for i in nums:
@@ -21,7 +21,7 @@ def square(nums):
 
 
 # Lamda function
-mySquareFunction = lambda num : num**2
+mySquareFunction = lambda num:  num
 squares = []
 for i in [1, 2, 3, 4, 5]:
     squares.append(mySquareFunction(i))

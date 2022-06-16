@@ -28,7 +28,7 @@ finally:
 
 # Throwing exceptions using keyword "raise"   
 def divide(arg1, arg2):
-    if ((type(arg1) == int or type(arg1) == float or type(arg2) == int or type(arg2) == float) and (arg1 != 0 and arg2 != 0)) :
+    if ((type(arg1) == int or type(arg1) == float) and (type(arg2) == int or type(arg2) == float) and (arg1 != 0 and arg2 != 0)) :
         return arg1/arg2
     else: 
         print("Not a number")

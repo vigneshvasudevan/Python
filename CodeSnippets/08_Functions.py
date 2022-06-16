@@ -146,6 +146,30 @@ sort(arr)
 print("After sorting Array = ", arr) 
 
 
+# Recursive function: Solving fibonacci series
+def fib(n):
+    if n < 1:
+        return 0
+    elif n < 3 :
+        return 1
+    else :
+        return fib(n-1) + fib(n-2)
+
+print("Unoptimized fibonacci using recursion", fib(5))    
+
+#optimized fibonnacci by memoization using dict
+cache = {1 : 1 , 2: 1}
+def fibUsingDP(n) :
+    if n < 1:
+        return 0
+    else:
+        if n not in cache :
+            cache[n] = fibUsingDP(n-1) + fibUsingDP(n-2)
+        return cache[n]
+    
+print("Optimized fibonacci using recursion", fibUsingDP(5))    
+
+
 
 '''
 Things to ponder:
