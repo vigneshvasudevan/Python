@@ -58,7 +58,7 @@ Data Definition Language (DDL)
     
     DROP: delete both the structure and record stored in the table
         syntax: DROP TABLE table_name
-        e.g) DROP TABLE EMPLOYEE;  
+        e.g) DROP TABLE Employee;  
         
     ALTER: used to alter the structure of the database.
         syntax: 

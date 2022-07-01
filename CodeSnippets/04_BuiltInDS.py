@@ -19,7 +19,7 @@ collections, numpyarray, dataframe in pandas
 Topic: List
 -------------------------
 Syntax:
-<var name> = [value1, value2, value1,...]
+<varname> = [value1, value2, value1,...]
 Here 
 1. value1 and value2 may or may not be of same datatype.
 2. Duplicates are allowed in list
@@ -102,7 +102,7 @@ course = ("bachelors", "masters", "diploma" )
 --------------------------------------------------------
 Topic: Sets
 Syntax:
-<var name> = {value1, value2, value3,...}
+<varname> = {value1, value2, value3,...}
 
 here
 1. Every value in the set must be unique
