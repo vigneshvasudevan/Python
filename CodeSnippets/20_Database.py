@@ -177,7 +177,7 @@ DQL is used to fetch the data from the database
         WHERE conditions;  
     
     E.g)
-        SELECT name  
+        SELECT name, rollno 
         FROM Student  
         WHERE cgpa > 7.5;  
         
@@ -186,82 +186,134 @@ DQL is used to fetch the data from the database
 Pre-requisite aka setting up environment:
 ----------------------------------------- 
 
-step1. Install PostgreSQL from https://www.postgresql.org/download/
+Method1: PostgreSQL without docker
+    step1. Install PostgreSQL from https://www.postgresql.org/download/
 
-step2: Add postgresql install location to system environment variable "PATH"
-in mac export PATH=$PATH:<pathToPostgreSQLOnMachine> 
+    step2: Add postgresql install location to system environment variable "PATH"
+    in mac export PATH=$PATH:<pathToPostgreSQLOnMachine> 
 
-e.g) export PATH=$PATH:/Users/foo/Documents/Postgresql/bin
-  
-step3:
-    Run below commands one after other
+    e.g) export PATH=$PATH:/Users/foo/Documents/Postgresql/bin
     
-    pip3 install --upgrade wheel
-    pip3 install --upgrade setuptools
-    pip3 install psycopg2 
-
-
-step4: Initialize postgres
-    Create a folder where 'postgres' user has read, write permission.This can be done by running 
-    
-    chown -R <yourusername> <path>
-    e.g) chown -R vigneshv /Users/vigneshv/Documents/KnowledgeBase/Data
-    
-    now run
-    pg_ctl -D /Users/vigneshv/Documents/KnowledgeBase/Data -U vigneshv initdb
-
-
-step5: start postgres server by running below command inside terminal/command prompt
-    syntax: pg_ctl -D <pathToPostgresDatabase> start
-    
-        /opt/homebrew/Cellar/postgresql/14.2_1/bin/pg_ctl -D /Users/vigneshv/Documents/KnowledgeBase/Data -l /Users/vigneshv/Documents/logfile start
-
-    Note: 
-        1. you may also use "which postgres" command to get the path to Postgres exectuable
-        2. similarly to stop postgre server : pg_ctl -D /Users/vigneshv/Documents/Postgres/data/ stop 
-
-    or
-    
-    In mac
-        brew services restart postgresql
-
-step6: launch postgresql command line terminal to create a database
-    Run
-        psql -d template1 
-
-    Here "template1" is the default database in every installation
-    
-    now run
-        CREATE DATABASE mock WITH OWNER vigneshv ENCODING 'UTF8';
-    
-    Here 'mock' is the name of the new database and 'vigneshv' is the owner
-    
-        To set password
-            ALTER USER vigneshv PASSWORD 'newpwd'
-    
-    
-step7: Create a schema and set it on the database we created
-    1. switch to 'mock' database
-        To connect a DB: \c <DB name> 
-        i.e., \c mock
+    step3:
+        Run below commands one after other
         
-        Here semicolon indicates end of the command and it's mandatory
-    
-    2. Create a schema
+        pip3 install --upgrade wheel
+        pip3 install --upgrade setuptools
+        pip3 install psycopg2 
 
-        To get available schema
-            SELECT nspname FROM pg_catalog.pg_namespace;
-            
-            or 
-            
-            \dn
-            
-        Either work with default schema 'public' or create one of your choice by using
+    if you're on windows, try with 'pip' instead of 'pip3'
+
+    step4: Initialize postgres
+        Create a folder where 'postgres' user has read, write permission.This can be done by running 
         
-        CREATE SCHEMA myschema;SET SCHEMA 'myschema'; \i mockDBSchema.sql 
-            or
-        \i mockDBSchema.sql   
-    
+        chown -R <yourusername> <path>
+        e.g) chown -R vigneshv /Users/vigneshv/Documents/KnowledgeBase/Data
+        
+        now run
+        pg_ctl -D /Users/vigneshv/Documents/KnowledgeBase/Data -U vigneshv initdb
+
+
+    step5: start postgres server by running below command inside terminal/command prompt
+        syntax: pg_ctl -D <pathToPostgresDatabase> start
+        
+            /opt/homebrew/Cellar/postgresql/14.2_1/bin/pg_ctl -D /Users/vigneshv/Documents/KnowledgeBase/Data -l /Users/vigneshv/Documents/logfile start
+
+        Note: 
+            1. you may also use "which postgres" command to get the path to Postgres exectuable
+            2. similarly to stop postgre server : pg_ctl -D /Users/vigneshv/Documents/Postgres/data/ stop 
+
+        or
+        
+        In mac
+            brew services restart postgresql
+
+    step6: launch postgresql command line terminal to create a database
+        Run
+            psql -d template1 
+
+        Here "template1" is the default database in every installation
+        
+        now run
+            CREATE DATABASE mock WITH OWNER vigneshv ENCODING 'UTF8';
+        
+        Here 'mock' is the name of the new database and 'vigneshv' is the owner
+        
+            To set password
+                ALTER USER vigneshv PASSWORD 'newpwd'
+        
+        
+    step7: Create a schema and set it on the database we created
+        1. switch to 'mock' database
+            To connect a DB: \c <DB name> 
+            i.e., \c mock
+            
+            Here semicolon indicates end of the command and it's mandatory
+        
+        2. Create a schema
+
+            To get available schema
+                SELECT nspname FROM pg_catalog.pg_namespace;
+                
+                or 
+                
+                \dn
+                
+            Either work with default schema 'public' or create one of your choice by using
+            
+            CREATE SCHEMA myschema;SET SCHEMA 'myschema'; \i mockDBSchema.sql 
+                or
+            \i mockDBSchema.sql   
+        
+Method2: PostgreSQL inside docker
+
+    Step1: Download docker from https://docs.docker.com/engine/install/ & add
+            docker installation path to system enviornment variable. 
+    Step2: Install PostgreSQL image in docker by running below command from terminal
+            docker pull postgres
+            
+    Step3: Post installation check if postgres is added to docker image by running below command
+            docker images
+            
+            Sample output:
+                REPOSITORY    TAG       IMAGE ID        CREATED        SIZE
+                postgres      latest    9907cacf0c01    2 weeks ago    314MB   
+
+    Step4: Create a folder for PostgreSQL data, run 
+            mkdir ${HOME}/postgres-data/
+            
+    Step5: To run the postgres image in docker, execute below command in terminal
+            docker run -d \
+            --name foo \
+            -e POSTGRES_PASSWORD=password \
+            -v ${HOME}/postgres-data/:/var/lib/postgresql/data \
+                -p 5432:5432
+                postgres
+                
+            Here
+            foo = database name
+            password = Password to the database
+            5432 = Port on which postgres listens    
+        
+    Step 6: check that the container is running
+            docker ps  
+            
+            Sample output:
+            CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+            dfa570d6e843        postgres            "docker-entrypoint.s…"   27 hours ago        Up 3 seconds        0.0.0.0:5432->5432/tcp   postgres-test   
+            
+            
+    Step 7: Great, you have a running PostgreSQL instance and you should be able to enter the container from your command line and test the database instance:
+        docker exec -it foo bash
+        >>> Now you are in the container's bash console. Connect to the database
+        root@dfa570d6e843:/# psql -h localhost -U postgres
+        >>> psql (12.2 (Debian 12.2-2.pgdg100+1))
+        Type "help" for help.
+        postgres-# \l
+        List of databases
+        Name       |  Owner   | Encoding |  Collate   |   Ctype    |   ...
+        -----------+----------+----------+------------+------------+------
+        postgres   | postgres |   UTF8   | en_US.utf8 | en_US.utf8 |   ...
+
 '''
 
 #psycopg2 is the driver for communicating to postgres from Python
@@ -338,7 +390,7 @@ def ReadFromDB():
             con.close()
             
 
-AddRecordsToDB()
+#AddRecordsToDB()
 ReadFromDB()
 
 

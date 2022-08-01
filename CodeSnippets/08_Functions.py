@@ -135,10 +135,10 @@ def sort(arr) :
             arr[smallestPos] = temp
   
       
-arr = [10, 20, 5, 8, 7 , 15]
-print("Before sorting Array = ", arr)
-sort(arr) 
-print("After sorting Array = ", arr) 
+arr2 = [10, 20, 5, 2,  8, 7 , 15]
+print("Before sorting Array = ", arr2)
+sort(arr2) 
+print("After sorting Array = ", arr2) 
 
 arr = [10, 20, -50, -8, 7 , -15]
 print("Before sorting Array = ", arr)
@@ -176,10 +176,36 @@ Things to ponder:
 Why 'function' is called as first-class citizens of python ?
 
 Things to try: 
-    1. Write a function to find minmum of two given values
+    1. Write a function to find minimum of two given values
         - Return none when type is mistmatched, return min otherwise
     2. Write a function to find minmum of list
         - Return none when type is mistmatched, return min otherwise
-    3. Write a function which takes one argument 'n' & return nth Fibonacci
+    
+    3. Write a function which takes a list of numbers(unsorted) and target sum as input argument and returns a pair which sums up to the target. Return ‘None’ when no pair sum up to the target.
+        def findTargetSumPairs(x : list, targetSum :int) -> (int, int) :
+            # write your solution here
+        e.g
+        [2, 1, 7, 4, 3, 5],  target = 13 here answer would be ‘None’ as no pair sum up to 13
+        [2, 1, 7, 4, 3, 5], target = 7 here answer would be 4, 3
+        [2, 1, 7, 4, 3, 5, -1], target = 4 here answer would be 1,3  or 5, -1 as 1+3 = 4 and 5-1 = 4 .In this case return one of the valid answer
+
+    4. Write a function which takes a list of numbers(sorted) and target sum as input argument and returns a pair which sums up to the target. Return ‘None’ when no pair sum up to the target.
+        def findTargetSumPairs(x : list, targetSum :int) -> (int, int) :
+            # write your solution here
+        e.g
+        [1, 2, 3, 4, 5, 7],  target = 13 here answer would be ‘None’ as no pair sum up to 13
+        [1, 2, 3, 4, 5, 7], target = 7 here answer would be 4, 3
+        [-1, 1, 2, 3, 4, 5, 7], target = 4 here answer would be 1,3  or 5, -1 as 1+3 = 4 and 5-1 = 4 .In this case return one of the valid answer
+
+
+
+    5. Write a function which takes a list of numbers(unsorted) and target sum as input argument and returns a pair(of length k) which sums up to the target. Return ‘None’ when no pair sum up to the target.
+        def findKSum(x : list, targetSum :int, k : int) -> list :
+            # write your solution here
+       
+
+    6. Write a function which takes one argument 'n' & return nth Fibonacci
+    
+    
 '''
 
