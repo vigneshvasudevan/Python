@@ -62,6 +62,43 @@ Topic: Types of operator
 '''
 
 
+# Arithmetic operators
+x = 10 
+y = 20
+print("Sum = ", x + y)
+print("Subtract = ", x - y)
+print("Div = ", x / y)
+print("Mul = ", x * y)
+print("Modullo = ", x % y)
+print("FloorDiv = ", x // y)
+
+
+# logical operator
+x = 100
+y = 200
+print("Is x greater than = ", x > y)
+print("Is x equal to y = ", x == y)
+print("Is x greater than or equal to y = ", x >= y)
+print("Is x smaller than = ", x < y)
+print("Is x smaller than or equal to y = ", x <= y)
+print("Is x not equal to y = ", x != y)
+
+#Bitwise operator
+x = 17
+y = 13
+print("Bitwise of x AND y = ", x & y)
+print("Bitwise of x OR y = ", x | y)
+print("Bitwise of x XOR y = ", x ^ y)
+print("Bitwise NOT of x = ", ~x)
+print("Bitwise right shift x by 2 = ", x >> 2)
+print("Bitwise left shift x by 2 = ", x << 2)
+
+
+# Concatenating strings
+firstname = "hi"
+lastname = "hello"
+fullname = firstname + " " + lastname
+print(fullname)
 
 foo = 100
 bar = 200
